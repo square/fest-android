@@ -58,15 +58,37 @@ public class DisplayAssert extends AbstractAssert<DisplayAssert, Display> {
   //  return this;
   //}
 
+  public static final int HORIZONTAL = 0;
+  public static final int VERTICAl = 1;
+
   public DisplayAssert hasOrientation(int orientation) {
     isNotNull();
     int actualOrientation = actual.getOrientation();
     // TODO convert to string names
     assertThat(actualOrientation) //
-        .overridingErrorMessage("Expected orientation <%s> but was <%s>", orientation,
-            actualOrientation) //
+        .overridingErrorMessage("Expected orientation <%s> but was <%s>",
+                getOrientation(orientation), getOrientation(actualOrientation))
         .isEqualTo(orientation);
     return this;
+  }
+
+  public DisplayAssert isVertical() {
+    return this.hasOrientation(VERTICAl);
+  }
+
+  public DisplayAssert isHorizontal() {
+    return this.hasOrientation(HORIZONTAL);
+  }
+
+  private String getOrientation(int orientation) {
+    switch (orientation) {
+      case HORIZONTAL:
+        return "horizontal";
+      case VERTICAl:
+        return "vertical";
+      default:
+        return orientation+"";
+    }
   }
 
   public DisplayAssert hasPixelFormat(int format) {
