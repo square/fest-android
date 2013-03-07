@@ -36,4 +36,11 @@ public class IntentAssert extends AbstractAssert<IntentAssert, Intent> {
         .isTrue();
     return this;
   }
+
+  public IntentAssert hasFlags(int flags) {
+    assertThat(actual.getFlags())
+    .overridingErrorMessage("Expected flags <%d> to be present but was not present.", flags)
+        .isEqualTo(flags);
+    return this;
+  }
 }
