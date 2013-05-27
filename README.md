@@ -82,6 +82,8 @@ To get started writing tests add the following import:
 import static org.fest.assertions.api.ANDROID.assertThat;
 ```
 
+For a complete working example, please take a look at the source code of [this sample][4].
+
 
 
 Extending
@@ -170,3 +172,4 @@ License
  [1]: http://fest.easytesting.org
  [2]: https://github.com/alexruiz/fest-assert-2.x/wiki/Creating-specific-assertions
  [3]: http://repository.sonatype.org/service/local/artifact/maven/redirect?r=central-proxy&g=com.squareup&a=fest-android&v=LATEST
+ [4]: https://github.com/square/spoon/tree/master/spoon-sample
