@@ -67,6 +67,14 @@ public class IntentAssert extends AbstractAssert<IntentAssert, Intent> {
     return this;
   }
 
+  public IntentAssert hasData(String uri) {
+      String actualUri = actual.getData().toString();
+      assertThat(actualUri) //
+      .overridingErrorMessage("Expected data Uri <%s> but was <%s>.", uri, actualUri)
+      .isEqualTo(uri);
+      return this;
+  }
+
   public static String flagsToString(int flags) {
     return new BitMaskStringBuilder(flags) //
         .flag(FLAG_GRANT_READ_URI_PERMISSION, "grant_read_uri_permission")
