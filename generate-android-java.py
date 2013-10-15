@@ -63,7 +63,7 @@ with open(OUTPUT, 'w') as out:
   out.write('// This class is generated. Do not modify directly!\n')
   out.write('package org.fest.assertions.api;\n\n')
   out.write('/** Assertions for testing Android classes. */\n')
-  out.write('public class ANDROID {')
+  out.write('public class ANDROID extends Assertions {')
   for package, target_package, generic_keys in sorted(assertions, key=lambda x: x[0]):
     out.write('\n')
     out.write('  public static %s%s assertThat(\n' % (generic_keys, package))
