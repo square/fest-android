@@ -4,7 +4,7 @@
 package org.fest.assertions.api;
 
 /** Assertions for testing Android classes. */
-public class ANDROID {
+public class ANDROID extends Assertions {
   public static org.fest.assertions.api.android.accounts.AccountAssert assertThat(
       android.accounts.Account actual) {
     return new org.fest.assertions.api.android.accounts.AccountAssert(actual);
