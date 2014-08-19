@@ -2,10 +2,9 @@ package org.assertj.android.api.bluetooth;
 
 import android.annotation.TargetApi;
 import android.bluetooth.BluetoothGattService;
-
-import org.assertj.core.api.AbstractAssert;
-
 import java.util.UUID;
+import org.assertj.android.internal.IntegerUtils;
+import org.assertj.core.api.AbstractAssert;
 
 import static android.bluetooth.BluetoothGattService.SERVICE_TYPE_PRIMARY;
 import static android.bluetooth.BluetoothGattService.SERVICE_TYPE_SECONDARY;
@@ -29,9 +28,10 @@ public class BluetoothGattServiceAssert
     return this;
   }
 
-  public BluetoothGattServiceAssert hasType(int type) {
+  public BluetoothGattServiceAssert hasType(@BluetoothGattServiceType int type) {
     isNotNull();
     int actualType = actual.getType();
+    //noinspection ResourceType
     assertThat(actualType) //
         .overridingErrorMessage("Expected type <%s> but was <%s>.", typeToString(type),
             typeToString(actualType)) //
@@ -48,7 +48,7 @@ public class BluetoothGattServiceAssert
     return this;
   }
 
-  public static String typeToString(int type) {
+  public static String typeToString(@BluetoothGattServiceType int type) {
     return buildNamedValueString(type) //
         .value(SERVICE_TYPE_PRIMARY, "primary")
         .value(SERVICE_TYPE_SECONDARY, "secondary")
