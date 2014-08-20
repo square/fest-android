@@ -7,7 +7,6 @@ import android.support.annotation.IntDef;
     Criteria.ACCURACY_LOW,
     Criteria.ACCURACY_MEDIUM,
     Criteria.ACCURACY_HIGH
-
 })
 @interface CriteriaAccuracy {
 }
