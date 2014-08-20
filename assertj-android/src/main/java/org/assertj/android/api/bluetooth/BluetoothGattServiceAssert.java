@@ -2,9 +2,10 @@ package org.assertj.android.api.bluetooth;
 
 import android.annotation.TargetApi;
 import android.bluetooth.BluetoothGattService;
-import java.util.UUID;
-import org.assertj.android.internal.IntegerUtils;
+
 import org.assertj.core.api.AbstractAssert;
+
+import java.util.UUID;
 
 import static android.bluetooth.BluetoothGattService.SERVICE_TYPE_PRIMARY;
 import static android.bluetooth.BluetoothGattService.SERVICE_TYPE_SECONDARY;

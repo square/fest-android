@@ -1,6 +1,5 @@
 package org.assertj.android.api.view;
 
-import android.content.res.Configuration;
 import android.support.annotation.IntDef;
 import android.view.View;
 

@@ -1,6 +1,5 @@
 package org.assertj.android.api.preference;
 
-import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.support.annotation.IntDef;
 
