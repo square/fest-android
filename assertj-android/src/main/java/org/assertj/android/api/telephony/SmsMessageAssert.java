@@ -211,7 +211,7 @@ public class SmsMessageAssert extends AbstractAssert<SmsMessageAssert, SmsMessag
 
   public SmsMessageAssert isMWISetMessage() {
     isNotNull();
-    assertThat(actual.isMWISetMessage ()) //
+    assertThat(actual.isMWISetMessage()) //
         .overridingErrorMessage("Expected to be MWI set message but was not.") //
         .isTrue();
     return this;
