@@ -16,59 +16,59 @@ public class PaletteAssert extends AbstractAssert<PaletteAssert, Palette> {
 
   public PaletteAssert hasVibrantColor(int color) {
     isNotNull();
-    int actualColor = actual.getVibrantColor(0);
-    assertThat(equals(color, actualColor)) //
+    int actualColor = actual.getVibrantColor(getAnotherColor(color));
+    assertThat(color) //
         .overridingErrorMessage("Expected vibrant color <%s> but was <%s>", color, actualColor) //
-        .isTrue();
+        .isEqualTo(actualColor);
     return this;
   }
 
   public PaletteAssert hasDarkVibrantColor(int color) {
     isNotNull();
-    int actualColor = actual.getDarkVibrantColor(0);
-    assertThat(equals(color, actualColor)) //
+    int actualColor = actual.getDarkVibrantColor(getAnotherColor(color));
+    assertThat(color) //
         .overridingErrorMessage("Expected dark vibrant color <%s> but was <%s>", color, actualColor) //
-        .isTrue();
+        .isEqualTo(actualColor);
     return this;
   }
 
   public PaletteAssert hasLightVibrantColor(int color) {
     isNotNull();
-    int actualColor = actual.getLightVibrantColor(0);
-    assertThat(equals(color, actualColor)) //
+    int actualColor = actual.getLightVibrantColor(getAnotherColor(color));
+    assertThat(color) //
         .overridingErrorMessage("Expected light vibrant color <%s> but was <%s>", color, actualColor) //
-        .isTrue();
+        .isEqualTo(actualColor);
     return this;
   }
 
   public PaletteAssert hasMutedColor(int color) {
     isNotNull();
-    int actualColor = actual.getMutedColor(0);
-    assertThat(equals(color, actualColor)) //
+    int actualColor = actual.getMutedColor(getAnotherColor(color));
+    assertThat(color) //
         .overridingErrorMessage("Expected muted color <%s> but was <%s>", color, actualColor) //
-        .isTrue();
+        .isEqualTo(actualColor);
     return this;
   }
 
   public PaletteAssert hasDarkMutedColor(int color) {
     isNotNull();
-    int actualColor = actual.getDarkMutedColor(0);
-    assertThat(equals(color, actualColor)) //
+    int actualColor = actual.getDarkMutedColor(getAnotherColor(color));
+    assertThat(color) //
         .overridingErrorMessage("Expected dark muted color <%s> but was <%s>", color, actualColor) //
-        .isTrue();
+        .isEqualTo(actualColor);
     return this;
   }
 
   public PaletteAssert hasLightMutedColor(int color) {
     isNotNull();
-    int actualColor = actual.getLightMutedColor(0);
-    assertThat(equals(color, actualColor)) //
+    int actualColor = actual.getLightMutedColor(getAnotherColor(color));
+    assertThat(color) //
         .overridingErrorMessage("Expected light muted color <%s> but was <%s>", color, actualColor) //
-        .isTrue();
+        .isEqualTo(actualColor);
     return this;
   }
 
-  private static boolean equals(int actualColor, int color) {
-    return actualColor == color;
+  private static int getAnotherColor(int color) {
+    return 0xFFFFFFFF - color;
   }
 }
