@@ -98,6 +98,7 @@ Modules are also provided for the add-on Android libraries. Add the dependency
  * cardview-v7: `import static org.assertj.android.cardview.v7.api.Assertions.assertThat;`
  * recyclerview-v7: `import static org.assertj.android.recyclerview.v7.api.Assertions.assertThat;`
  * palette-v7: `import static org.assertj.android.palette.v7.api.Assertions.assertThat;`
+ * preference-v7: `import static org.assertj.android.preference.v7.api.Assertions.assertThat;`
 
 
 
@@ -194,6 +195,11 @@ androidTestCompile 'com.squareup.assertj:assertj-android-recyclerview-v7:1.1.1'
 palette-v7 module:
 ```groovy
 androidTestCompile 'com.squareup.assertj:assertj-android-palette-v7:1.1.1'
+```
+
+preference-v7 module:
+```groovy
+androidTestCompile 'com.squareup.assertj:assertj-android-preference-v7:1.1.1'
 ```
 
 Snapshots of the development version are available in [Sonatype's `snapshots` repository][snap].
