@@ -83,7 +83,7 @@ public class MediaRouterRouteInfoAssert
     isNotNull();
     int actualVolumeMax = actual.getVolumeMax();
     assertThat(actualVolumeMax) //
-        .overridingErrorMessage("Expected playback stream <%s> but was <%s>.", volumeMax,
+        .overridingErrorMessage("Expected maximum volume <%s> but was <%s>.", volumeMax,
             actualVolumeMax) //
         .isEqualTo(volumeMax);
     return this;
