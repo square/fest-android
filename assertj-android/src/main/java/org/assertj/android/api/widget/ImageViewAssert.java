@@ -2,11 +2,15 @@
 package org.assertj.android.api.widget;
 
 import android.annotation.TargetApi;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.widget.ImageView;
+
 import org.assertj.android.api.view.AbstractViewAssert;
 
 import static android.os.Build.VERSION_CODES.HONEYCOMB;
+import static android.os.Build.VERSION_CODES.HONEYCOMB_MR1;
 import static android.os.Build.VERSION_CODES.JELLY_BEAN;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -51,12 +55,17 @@ public class ImageViewAssert extends AbstractViewAssert<ImageViewAssert, ImageVi
     return this;
   }
 
+  @TargetApi(HONEYCOMB_MR1)
   public ImageViewAssert hasDrawable(Drawable drawable) {
     isNotNull();
+    Bitmap bitmap = ((BitmapDrawable) drawable).getBitmap();
+
     Drawable actualDrawable = actual.getDrawable();
-    assertThat(actualDrawable) //
+    Bitmap actualBitmap = ((BitmapDrawable) actualDrawable).getBitmap();
+
+    assertThat(actualBitmap.sameAs(bitmap)) //
         .overridingErrorMessage("Expected drawable <%s> but was <%s>.", drawable, actualDrawable) //
-        .isSameAs(drawable);
+        .isTrue();
     return this;
   }
 
