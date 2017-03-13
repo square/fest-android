@@ -82,6 +82,8 @@ To get started writing tests add the following import:
 import static org.assertj.android.api.Assertions.assertThat;
 ```
 
+For a complete working example, please take a look at the source code of [some samples](https://github.com/square/spoon/tree/master/spoon-sample).
+
 
 
 Add-On Modules
