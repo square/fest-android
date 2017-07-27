@@ -31,6 +31,7 @@ ext {
   supportMediaRouter = 'com.android.support:mediarouter-v7:25.0.1'
   supportPalette = 'com.android.support:palette-v7:25.0.1'
   supportRecyclerView = 'com.android.support:recyclerview-v7:25.0.1'
+  supportPreference = 'com.android.support:preference-v7:25.0.1'
 
   playServices = 'com.google.android.gms:play-services:7.5.0'
 

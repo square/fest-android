@@ -1,11 +1,8 @@
-// Copyright 2013 Square, Inc.
-package org.assertj.android.api.preference;
+// Copyright 2016 Square, Inc.
+package org.assertj.android.preference.v7.api.preference;
 
-import android.annotation.TargetApi;
-import android.app.Dialog;
 import android.graphics.drawable.Drawable;
-import android.preference.DialogPreference;
-import static android.os.Build.VERSION_CODES.HONEYCOMB;
+import android.support.v7.preference.DialogPreference;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public abstract class AbstractDialogPreferenceAssert<S extends AbstractDialogPreferenceAssert<S, A>, A extends DialogPreference>
@@ -14,16 +11,6 @@ public abstract class AbstractDialogPreferenceAssert<S extends AbstractDialogPre
     super(actual, selfType);
   }
 
-  public S hasDialog(Dialog dialog) {
-    isNotNull();
-    Dialog actualDialog = actual.getDialog();
-    assertThat(actualDialog) //
-        .overridingErrorMessage("Expected dialog <%s> but was <%s>.", dialog, actualDialog) //
-        .isSameAs(dialog);
-    return myself;
-  }
-
-  @TargetApi(HONEYCOMB)
   public S hasDialogIcon(Drawable icon) {
     isNotNull();
     Drawable actualIcon = actual.getIcon();
