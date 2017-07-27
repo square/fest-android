@@ -48,7 +48,7 @@ public class RecyclerViewLayoutManagerAssert
   public RecyclerViewLayoutManagerAssert canScrollVertically() {
     isNotNull();
     assertThat(actual.canScrollVertically()) //
-        .overridingErrorMessage("Expected to be able to scroll verticall but can not.") //
+        .overridingErrorMessage("Expected to be able to scroll vertically but can not.") //
         .isTrue();
     return this;
   }
@@ -220,7 +220,7 @@ public class RecyclerViewLayoutManagerAssert
     int actualWidth = actual.getMinimumWidth();
     assertThat(actualWidth) //
         .overridingErrorMessage("Expected minimum width <%s> but was <%s>.", width, actualWidth) //
-        .isEqualTo(actualWidth);
+        .isEqualTo(width);
     return this;
   }
 
@@ -230,7 +230,7 @@ public class RecyclerViewLayoutManagerAssert
     assertThat(actualHeight) //
         .overridingErrorMessage("Expected minimum height <%s> but was <%s>.", height,
             actualHeight) //
-        .isEqualTo(actualHeight);
+        .isEqualTo(height);
     return this;
   }
 }
