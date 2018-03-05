@@ -13,5 +13,8 @@ located at `*/build/report/checkstyle` directories.
 Before your code can be accepted into the project you must also sign the
 [Individual Contributor License Agreement (CLA)][1].
 
+## Triage Issues [![Open Source Helpers](https://www.codetriage.com/square/assertj-android/badges/users.svg)](https://www.codetriage.com/square/assertj-android)
+
+You can triage issues which may include reproducing bug reports or asking for vital information, such as version numbers or reproduction instructions. If you would like to start triaging issues, one easy way to get started is to [subscribe to assertj-android on CodeTriage](https://www.codetriage.com/square/assertj-android).
 
  [1]: https://spreadsheets.google.com/spreadsheet/viewform?formkey=dDViT2xzUHAwRkI3X3k5Z0lQM091OGc6MQ&ndplr=1
